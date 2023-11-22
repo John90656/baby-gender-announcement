@@ -1,5 +1,5 @@
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,7 +18,7 @@ body {
 }
 
 h2 {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: sans-serif;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -28,6 +28,10 @@ h2 {
     width: 30%;
     padding: 20px;
     border-radius: 10px;
+}
+
+.gender-text {
+    /* Remove or customize styling for the gender text */
 }
 
 .countdown {

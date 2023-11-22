@@ -1,38 +1,51 @@
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-color: #add8e6; /* Set default background color (blue) */
+    background-color: #add8e6;
 }
 
 .countdown-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    width: 80%; /* Adjust the width as needed */
+    width: 80%;
     margin: 0 auto;
+}
+
+h2 {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .column {
     text-align: center;
-    width: 30%; /* Adjust the width as needed */
+    width: 30%;
     padding: 20px;
     border-radius: 10px;
 }
 
-.gender-text {
-    /* Remove or customize styling for the gender text */
-}
-
 .countdown {
     text-align: center;
-    flex-grow: 1; /* Allow the countdown to take up remaining space */
+    flex-grow: 1;
     border-radius: 10px;
-    background-color: #ffffff; /* White background */
+    background-color: #ffffff;
 }
 
 #genderContent {
     margin-top: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .countdown-container {
+        width: 90%;
+    }
+    .column {
+        width: 100%;
+    }
 }

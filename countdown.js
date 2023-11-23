@@ -1,7 +1,10 @@
-const revealDate = new Date("2023-11-23T10:00:00");
+const revealDate = new Date("2023-11-23T19:00:00");
 const boyText = document.getElementById("boyText");
 const girlText = document.getElementById("girlText");
 const genderContent = document.getElementById("genderContent");
+
+// Specify the gender for testing (true for boy, false for girl)
+const testGender = false; // Change this value for testing
 
 function updateCountdown() {
     const currentDate = new Date();
@@ -14,8 +17,18 @@ function updateCountdown() {
         girlText.style.visibility = "hidden";
         genderContent.style.display = "block";
 
-        // Change background color to pink
-        document.body.style.backgroundColor = "#FFC0CB"; // pastel pink
+        // Determine the revealed gender
+        const isBoy = testGender; // Use the specified test gender
+
+        if (isBoy) {
+            // Blue state
+            document.body.style.backgroundColor = "#add8e6"; // light blue
+            genderContent.innerHTML = "<h2>It's a ...</h2><h1>BOY!</h1>";
+        } else {
+            // Pink state
+            document.body.style.backgroundColor = "#FFC0CB"; // pastel pink
+            genderContent.innerHTML = "<h2>It's a ...</h2><h1>GIRL!</h1>";
+        }
     } else {
         // Countdown
         const seconds = Math.floor(difference / 1000);
@@ -50,3 +63,11 @@ updateCountdown();
 
 // Update the countdown every second
 setInterval(updateCountdown, 1000);
+
+
+// Set the baby name directly
+const babyName = "Salmon";
+
+// Update the title with the dynamic value
+const revealTitle = document.getElementById("revealTitle");
+revealTitle.innerHTML = `Gender Reveal: Baby ${babyName}`;

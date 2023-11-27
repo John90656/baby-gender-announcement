@@ -1,4 +1,4 @@
-const revealDate = new Date("2023-11-27T09:47:00");
+const revealDate = new Date("2023-11-27T10:47:00");
 const boyText = document.getElementById("boyText");
 const girlText = document.getElementById("girlText");
 const genderContent = document.getElementById("genderContent");
